@@ -1,0 +1,130 @@
+.msp-intro,
+.cloud-services,
+.msp-operations,
+.migration-section,
+.partner-section {
+  width: 100%;
+  min-width: 0;
+  padding-right: clamp(24px, 7vw, 112px);
+  padding-left: clamp(24px, 7vw, 112px);
+}
+
+.msp-intro {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 6vw, 84px);
+}
+
+.msp-intro > *,
+.msp-operations > *,
+.cloud-grid > *,
+.migration-grid > * {
+  min-width: 0;
+}
+
+.msp-intro > p,
+.operations-list p,
+.cloud-grid p,
+.migration-grid p {
+  overflow-wrap: anywhere;
+}
+
+.msp-badges {
+  flex-wrap: wrap;
+  row-gap: 14px;
+}
+
+.cloud-grid,
+.migration-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cloud-grid article,
+.migration-grid article {
+  min-width: 0;
+}
+
+.cloud-grid h3,
+.migration-grid h3 {
+  overflow-wrap: anywhere;
+}
+
+.msp-operations {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(32px, 7vw, 96px);
+}
+
+.partner-section {
+  padding-top: clamp(76px, 9vw, 110px);
+  padding-bottom: clamp(76px, 9vw, 110px);
+}
+
+@media (max-width: 1050px) {
+  .cloud-grid,
+  .migration-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .msp-operations {
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .msp-intro,
+  .msp-operations {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .msp-intro,
+  .cloud-services,
+  .msp-operations,
+  .migration-section,
+  .partner-section {
+    padding-right: 8vw;
+    padding-left: 8vw;
+  }
+
+  .cloud-grid,
+  .migration-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .msp-badges {
+    grid-column: auto;
+  }
+
+  .partner-list {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .msp-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .msp-hero-actions .button {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .msp-focus-panel {
+    padding: 18px;
+  }
+
+  .msp-focus-panel p {
+    font-size: 15px;
+  }
+
+  .msp-panel-meta strong {
+    font-size: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .msp-hero-track {
+    animation: none;
+  }
+}

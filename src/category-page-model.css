@@ -1,0 +1,227 @@
+.category-page {
+  width: 100%;
+  min-width: 0;
+  overflow: clip;
+}
+
+.category-page > section:not(.category-hero) {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.category-page > section:not(.category-hero) > *,
+.category-page > section:not(.category-hero) :where(article, button, p, h2, h3) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.category-page .category-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: stretch;
+  gap: 0;
+  min-height: 660px;
+  padding: 104px 0 0;
+  background: #f4f1eb;
+  color: var(--ink);
+}
+
+.category-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 54px clamp(28px, 6vw, 92px) 72px clamp(28px, 11vw, 160px);
+}
+
+.category-hero-copy .eyebrow {
+  color: #806b52;
+}
+
+.category-hero-copy .eyebrow > span {
+  background: #806b52;
+}
+
+.category-page .category-hero h1 {
+  margin: 28px 0 26px;
+  color: #111923;
+  font: 500 clamp(46px, 5.35vw, 84px)/.98 'Space Grotesk';
+  letter-spacing: -.05em;
+}
+
+.category-page .category-hero h1 em {
+  color: #b67d3e;
+  font-style: normal;
+}
+
+.category-page .category-hero-copy > p {
+  max-width: 520px;
+  margin: 0;
+  color: #4b5864;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.category-page .category-hero-image {
+  position: relative;
+  min-width: 0;
+  min-height: 556px;
+  height: 100%;
+  align-self: stretch;
+  overflow: hidden;
+  border: 0;
+  box-shadow: none;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(.78);
+}
+
+.category-hero-panel {
+  position: absolute;
+  right: clamp(20px, 5vw, 72px);
+  bottom: 78px;
+  width: min(390px, calc(100% - 48px));
+  padding: 24px 25px 22px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  background: rgba(18, 25, 31, .48);
+  box-shadow: 0 12px 35px rgba(15, 23, 32, .12);
+  color: #f5f7f3;
+  backdrop-filter: blur(7px);
+}
+
+.category-hero-panel strong {
+  color: #e8d1b1;
+  font: 700 11px 'Space Grotesk';
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.category-hero-panel p {
+  margin: 16px 0 0;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.category-hero-ticker {
+  position: absolute;
+  right: clamp(16px, 3vw, 42px);
+  bottom: 20px;
+  left: clamp(16px, 3vw, 42px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .14);
+  background: rgba(9, 17, 20, .55);
+  backdrop-filter: blur(7px);
+}
+
+.category-hero-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 34px;
+  padding: 13px 0;
+  color: #f3f4ef;
+  font: 700 10px 'Space Grotesk';
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: category-hero-scroll 24s linear infinite;
+}
+
+.category-hero-track span::before {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 12px 1px 0;
+  border-radius: 50%;
+  background: #c79661;
+  content: '';
+}
+
+@keyframes category-hero-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1100px) {
+  .category-hero-copy {
+    padding-left: 7vw;
+  }
+
+  .category-page .category-hero h1 {
+    font-size: clamp(44px, 5vw, 64px);
+  }
+}
+
+@media (max-width: 800px) {
+  .category-page .category-hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    padding-top: 72px;
+  }
+
+  .category-hero-copy {
+    padding: 58px 8vw 38px;
+  }
+
+  .category-page .category-hero h1 {
+    font-size: clamp(42px, 10vw, 68px);
+  }
+
+  .category-page .category-hero-image {
+    min-height: 470px;
+  }
+
+  .category-hero-panel {
+    right: 8vw;
+    bottom: 78px;
+    left: 8vw;
+    width: auto;
+  }
+
+  .category-page > section:not(.category-hero) {
+    padding-right: 8vw;
+    padding-left: 8vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .category-page .category-hero-image {
+    min-height: 420px;
+  }
+
+  .category-hero-panel {
+    padding: 18px;
+  }
+
+  .category-hero-panel p {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category-hero-track {
+    animation: none;
+  }
+}
+
+.category-page-services .category-hero {
+  min-height: 680px;
+  padding-top: 20px;
+}
+
+.category-page-services .category-hero-image {
+  min-height: 660px;
+}
+
+@media (max-width: 800px) {
+  .category-page-services .category-hero {
+    min-height: 0;
+    padding-top: 72px;
+  }
+
+  .category-page-services .category-hero-image {
+    min-height: 440px;
+  }
+}
