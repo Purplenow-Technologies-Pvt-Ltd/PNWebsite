@@ -1,6 +1,6 @@
 {
   "name": "pnwebsite",
-  "compatibility_date": "2026-10-12",
+  "compatibility_date": "2026-10-14",
   "assets": {
     "directory": "./dist"
   }
