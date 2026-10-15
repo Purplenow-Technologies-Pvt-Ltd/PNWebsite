@@ -42,6 +42,7 @@ import './consolidated-overview.css';
 import './category-page-model.css';
 import './site-refresh.css';
 import './products-refresh.css';
+import './msp-sections.css';
 
 const navItems = [
   { label: 'Home', key: 'home' },
@@ -738,8 +739,10 @@ function MergedMsp({ go }) {
   const capabilities = [
     ['01', 'Cloud architecture', 'Design secure landing zones and operating foundations across Azure, AWS, and Google Cloud.', Cloud],
     ['02', 'Networking solutions', 'Connect sites, users, data centres, and cloud environments with resilient routing, segmentation, and secure access.', Network],
-    ['03', 'Migration and modernization', 'Move workloads from on-premises, VMware, or another cloud with the right balance of lift-and-shift and redesign.', HardDrive],
-    ['04', 'Data engineering', 'Build reliable pipelines, storage, governance, and analytics foundations that make enterprise data useful.', Activity]
+    ['03', 'Firewall solutions', 'Sophos and Fortinet firewall sales, deployment, policy configuration, and secure network protection.', ShieldCheck],
+    ['04', 'Nutanix and on-prem servers', 'Nutanix solutions and on-premises server sales, sizing, installation, and configuration for your environment.', HardDrive],
+    ['05', 'Migration and modernization', 'Move workloads from on-premises, VMware, or another cloud with the right balance of lift-and-shift and redesign.', HardDrive],
+    ['06', 'Data engineering', 'Build reliable pipelines, storage, governance, and analytics foundations that make enterprise data useful.', Activity]
   ];
   const migrations = [
     ['On-premises to cloud', 'Assess applications, map dependencies, select landing zones, migrate in waves, and validate the new operating model.'],
@@ -783,22 +786,40 @@ function MergedMsp({ go }) {
       <div className="cloud-grid">{providers.map(([title, text], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p><button onClick={() => go('contact')}>Discuss your environment <ArrowUpRight size={15} /></button></article>)}</div>
     </section>
     <section className="cloud-capabilities">
-      <div className="section-top"><Eyebrow>Connected cloud capability</Eyebrow><span>Architecture / network / migration / data</span></div>
-      <div className="cloud-capability-grid">{capabilities.map(([number, title, text, Icon]) => <article key={title}><span>{number}</span><Icon size={28} /><h3>{title}</h3><p>{text}</p></article>)}</div>
+      <div className="section-top"><Eyebrow>Cloud, security &amp; infrastructure</Eyebrow><span>Cloud / firewalls / servers / migrations</span></div>
+      <div className="cloud-capability-marquee" role="region" aria-label="Cloud, security, and infrastructure capabilities" tabIndex={0}>
+        <div className="cloud-capability-track">
+          {[false, true].map((duplicate) => (
+            <div className="cloud-capability-group" aria-hidden={duplicate || undefined} key={String(duplicate)}>
+              {capabilities.map(([number, title, text, Icon]) => <article key={title}><span>{number}</span><Icon size={28} /><h3>{title}</h3><p>{text}</p></article>)}
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
     <section className="cloud-providers">
-      <div className="provider-orbit"><span className="provider-core">CLOUD<br />OPERATIONS</span><span className="provider azure">AZURE</span><span className="provider aws">AWS</span><span className="provider gcp">GCP</span></div>
+      <div className="cloud-provider-photo">
+        <img src="/cloud-data-center.jpg" alt="Rows of interconnected servers in a data center" />
+        <div className="cloud-provider-badges" aria-label="Supported cloud platforms">
+          <span>Azure</span><span>AWS</span><span>GCP</span>
+        </div>
+        <span className="cloud-provider-caption">One connected cloud environment</span>
+      </div>
       <div><Eyebrow>Multi-cloud by design</Eyebrow><h2>One operating view<br /><em>across your stack.</em></h2><p>Use the cloud services that fit each workload while keeping identity, security, cost, networking, monitoring, and support understandable across the whole environment.</p><div className="provider-tags"><span>Microsoft 365</span><span>Hybrid cloud</span><span>Backup and DR</span><span>FinOps visibility</span></div></div>
     </section>
     <section className="cloud-services-detail">
-      <div><Eyebrow>Cloud and managed services</Eyebrow><h2>From first landing zone<br />to <em>daily operations.</em></h2></div>
+      <div className="cloud-services-detail-heading">
+        <Eyebrow>Cloud and managed services</Eyebrow>
+        <h2>From first landing zone<br />to <em>daily operations.</em></h2>
+        <p>Practical expertise for planning, modernizing, securing, and operating your cloud environment.</p>
+      </div>
       <div className="cloud-service-list">
-        <article><strong>Cloud foundations</strong><p>Plan secure landing zones, identity, governance, network topology, monitoring, backup, and disaster recovery for hybrid and multi-cloud environments.</p></article>
-        <article><strong>Lift and shift</strong><p>Move suitable workloads with discovery, dependency mapping, right-sizing, cutover planning, and post-migration stabilization.</p></article>
-        <article><strong>Cloud modernization</strong><p>Refactor or re-platform applications where containers, managed services, automation, and elastic scale create a better result.</p></article>
-        <article><strong>Microsoft 365 and productivity</strong><p>Support Microsoft 365 adoption, identity, collaboration, security, administration, and user enablement.</p></article>
-        <article><strong>Data engineering</strong><p>Design ingestion, transformation, lakehouse, warehouse, governance, reporting, and analytics workflows that teams can trust.</p></article>
-        <article><strong>Network and security</strong><p>Plan hybrid connectivity, segmentation, firewall policy, secure remote access, resilience, and operational visibility.</p></article>
+        <article><span>01</span><div><h3>Cloud foundations</h3><p>Plan secure landing zones, identity, governance, network topology, monitoring, backup, and disaster recovery for hybrid and multi-cloud environments.</p></div></article>
+        <article><span>02</span><div><h3>Lift and shift</h3><p>Move suitable workloads with discovery, dependency mapping, right-sizing, cutover planning, and post-migration stabilization.</p></div></article>
+        <article><span>03</span><div><h3>Cloud modernization</h3><p>Refactor or re-platform applications where containers, managed services, automation, and elastic scale create a better result.</p></div></article>
+        <article><span>04</span><div><h3>Microsoft 365 and productivity</h3><p>Support Microsoft 365 adoption, identity, collaboration, security, administration, and user enablement.</p></div></article>
+        <article><span>05</span><div><h3>Data engineering</h3><p>Design ingestion, transformation, lakehouse, warehouse, governance, reporting, and analytics workflows that teams can trust.</p></div></article>
+        <article><span>06</span><div><h3>Network and security</h3><p>Plan hybrid connectivity, segmentation, firewall policy, secure remote access, resilience, and operational visibility.</p></div></article>
       </div>
     </section>
     <section className="migration-section">
@@ -808,12 +829,26 @@ function MergedMsp({ go }) {
     <section className="msp-operations">
       <div><Eyebrow>How we engage</Eyebrow><h2>Right-sized support<br /><em>for real operations.</em></h2></div>
       <div className="operations-list">
-        <article><strong>01 / One-time implementation</strong><p>Assessment, design, landing zone setup, migration, configuration, documentation, and handover.</p></article>
-        <article><strong>02 / Support services</strong><p>Monitoring, incident response, patching, backup checks, performance tuning, and service reviews.</p></article>
+        <article><strong>01 / One-time implementations</strong><p>Assessment, design, cloud or on-prem setup, firewall and server configuration, migration, documentation, and handover.</p></article>
+        <article><strong>02 / Support services</strong><p>Ongoing monitoring and support for cloud platforms, Sophos and Fortinet firewalls, servers, backups, and performance.</p></article>
         <article><strong>03 / Ticketing systems</strong><p>A structured service desk keeps requests visible, prioritized, assigned, and measurable from open to resolved.</p></article>
       </div>
     </section>
-    <section className="partner-section"><Eyebrow>Partner ecosystem</Eyebrow><h2>Specialists where<br /><em>your stack needs them.</em></h2><div className="partner-list"><span>Microsoft Solutions Partner</span><span>AWS Partner</span><span>Google Cloud Partner</span><span>Sophos Partner</span><span>Fortinet Partner</span><span>Nutanix Partner</span></div></section>
+    <section className="partner-section partner-showcase">
+      <div className="partner-showcase-heading">
+        <Eyebrow>Our partners</Eyebrow>
+        <h2>Technology built<br /><em>on trusted platforms.</em></h2>
+        <p>We bring together proven infrastructure, security, and cloud platforms to fit the way your business works.</p>
+      </div>
+      <div className="partner-showcase-grid" aria-label="Technology partners">
+        <article><span className="partner-wordmark partner-hpe">HPE</span><span className="partner-category">Infrastructure</span></article>
+        <article><span className="partner-wordmark partner-sophos">sophos</span><span className="partner-category">Cybersecurity</span></article>
+        <article><span className="partner-wordmark partner-fortinet">FORTINET</span><span className="partner-category">Network security</span></article>
+        <article><span className="partner-wordmark partner-azure">Microsoft Azure</span><span className="partner-category">Cloud platform</span></article>
+        <article><span className="partner-wordmark partner-aws">aws</span><span className="partner-category">Cloud platform</span></article>
+        <article><span className="partner-wordmark partner-gcp">Google Cloud</span><span className="partner-category">Cloud platform · GCP</span></article>
+      </div>
+    </section>
     <section className="cloud-outcome"><Eyebrow>Why Purplenow</Eyebrow><h2>Cloud that improves<br /><em>the way work moves.</em></h2><p>Our certified cloud, networking, security, data, and support engineers stay with your environment beyond migration, helping it remain secure, observable, and ready to evolve.</p><Button light onClick={() => go('contact')}>Talk to our cloud team</Button></section>
     <Cta go={go} />
   </>;
