@@ -54,7 +54,10 @@ export default defineConfig({
         erpWorkday: resolve(import.meta.dirname, 'erp-workday.html'),
         productOne: resolve(import.meta.dirname, 'product-1.html'),
         productTwo: resolve(import.meta.dirname, 'product-2.html'),
-        productThree: resolve(import.meta.dirname, 'product-3.html')
+        productThree: resolve(import.meta.dirname, 'product-3.html'),
+        nexEdgeOne: resolve(import.meta.dirname, 'nexedge-one.html'),
+        nexSense: resolve(import.meta.dirname, 'nexsense.html'),
+        nexCloud: resolve(import.meta.dirname, 'nexcloud.html')
       }
     }
   }

@@ -89,7 +89,7 @@ const navItems = [
     ]
   },
   { label: 'Industries', key: 'industries', children: ['Medical', 'Industrial', 'Consumer electronics', 'Semiconductor'] },
-  { label: 'Products', key: 'products', children: ['Product 1', 'Product 2', 'Product 3'] },
+  { label: 'Products', key: 'products', children: ['NexEdge One', 'NexSense', 'NexCloud'] },
   { label: 'MSP', key: 'msp' }
 ];
 
@@ -412,7 +412,7 @@ function NexSense({ go }) { const capabilities = [['01', 'Network visibility', '
 
 function NexCloud({ go }) { const capabilities = [['01', 'Smart metering', 'Capture accurate water, gas, and energy consumption with meter interfaces, pulse inputs, sensors, and configurable reading schedules.', Activity], ['02', 'Connected field devices', 'Connect distributed meters through NB-IoT, LTE-M, LoRaWAN, cellular, Wi-Fi, or gateway-based deployments.', Network], ['03', 'Utility data platform', 'Transform readings into reliable time-series data for billing, reporting, forecasting, dashboards, and operational decisions.', Cloud], ['04', 'Exceptions and intelligence', 'Detect leaks, tampering, unusual usage, missing data, outages, and consumption patterns that need attention.', BrainCircuit]]; return <><PageHero eyebrow="Purplenow product / NexCloud" title="A smarter view of<br /><em>every unit consumed.</em>" text="NexCloud is a connected metering platform for smart water, gas, and energy projects, bringing field devices, telemetry, data, and utility operations together." image="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85" /><section className="nexcloud-intro"><div><Eyebrow>Smart utility platform</Eyebrow><h2>Measure clearly.<br /><em>Act earlier.</em></h2></div><p>NexCloud helps utility and infrastructure teams move from periodic readings to useful operational intelligence. It creates a dependable chain from meter and sensor to secure message, data service, dashboard, and action.</p><Button onClick={() => go('contact')}>Discuss your metering project</Button></section><section className="nexcloud-capabilities"><div className="section-top"><Eyebrow>Platform capability</Eyebrow><span>Water / gas / energy / operations</span></div><div className="nexcloud-capability-grid">{capabilities.map(([number, title, text, Icon]) => <article key={title}><span>{number}</span><Icon size={28} /><h3>{title}</h3><p>{text}</p><ArrowUpRight /></article>)}</div></section><section className="nexcloud-flow"><div className="meter-flow-visual"><div className="meter-device"><span className="meter-face">kWh</span><span className="meter-reading">01842.6</span><i /></div><div className="meter-path path-one" /><div className="meter-path path-two" /><div className="meter-path path-three" /><span className="meter-label label-meter">METER</span><span className="meter-label label-message">MQTT / RADIO</span><span className="meter-label label-insight">INSIGHT</span></div><div><Eyebrow>From reading to response</Eyebrow><h2>Every signal<br /><em>has a story.</em></h2><p>A meter reading becomes valuable when it is timely, trusted, and connected to context. NexCloud helps teams see usage, compare sites, spot exceptions, and respond before a small issue becomes a costly one.</p><div className="nexcloud-tags"><span>Remote readings</span><span>Usage analytics</span><span>Leak detection</span><span>Tamper alerts</span></div></div></section><section className="nexcloud-services"><div><Eyebrow>Detailed product design</Eyebrow><h2>Built for the<br /><em>utility lifecycle.</em></h2></div><div className="nexcloud-service-list"><article><strong>Meter and sensor integration</strong><p>Interface with water, gas, and energy meters using pulse, serial, Modbus, optical, current, voltage, and environmental inputs.</p></article><article><strong>Edge device and firmware</strong><p>Manage sampling, local storage, battery behavior, timestamps, device health, remote configuration, and secure update paths.</p></article><article><strong>MQTT and telemetry</strong><p>Publish readings, state, alarms, acknowledgements, and commands with reconnect handling, authentication, and message quality controls.</p></article><article><strong>Utility data engineering</strong><p>Build ingestion, validation, normalization, aggregation, time-series storage, APIs, dashboards, and billing-ready data workflows.</p></article><article><strong>Operations and customer insight</strong><p>Monitor sites, investigate abnormal consumption, support field teams, notify users, and create reports for operational and commercial teams.</p></article></div></section><section className="nexcloud-utilities"><div><Eyebrow>Designed for multiple utilities</Eyebrow><h2>One platform.<br /><em>Three critical flows.</em></h2></div><div className="utility-grid"><article><span>01</span><h3>Smart water</h3><p>Consumption patterns, leak signals, pressure context, remote reads, and network loss visibility.</p></article><article><span>02</span><h3>Smart gas</h3><p>Usage telemetry, valve and safety states, tamper awareness, battery health, and remote operations.</p></article><article><span>03</span><h3>Smart energy</h3><p>Load profiles, demand trends, power quality signals, consumption analytics, and efficiency opportunities.</p></article></div></section><section className="nexcloud-journey"><div><Eyebrow>Project lifecycle</Eyebrow><h2>From pilot<br />to <em>utility scale.</em></h2></div><div className="nexcloud-journey-list"><article><strong>01 / Connect</strong><p>Choose the meter, device, network, gateway, and deployment pattern for the environment.</p></article><article><strong>02 / Validate</strong><p>Check readings, timestamps, connectivity, battery behavior, data quality, and exception handling.</p></article><article><strong>03 / Operate</strong><p>Monitor the estate, manage devices, investigate alerts, and support field and customer teams.</p></article><article><strong>04 / Improve</strong><p>Use usage data and operational feedback to expand coverage and make better decisions.</p></article></div></section><section className="nexcloud-outcome"><Eyebrow>Why NexCloud</Eyebrow><h2>Make consumption<br /><em>visible and useful.</em></h2><p>Connect metering hardware, embedded software, networks, cloud, data engineering, and operational workflows in one platform designed for the realities of distributed utility projects.</p><Button light onClick={() => go('contact')}>Request a product discussion</Button></section></>; }
 
-function Careers({ go }) { const jobs = [['Platform Development Engineer', 'Platform Engineering', 'Design modern digital platforms, APIs, and cloud foundations for enterprise products.', 'Hyderabad / Bengaluru'], ['Hardware Design Engineer', 'Hardware Engineering', 'Develop schematics, PCB layouts, prototypes, and production-ready connected electronics.', 'Pune / Bengaluru'], ['Embedded Firmware Engineer', 'Embedded Systems', 'Build MCU, RTOS, device-driver, connectivity, and diagnostics software for real products.', 'Bengaluru'], ['IoT Solutions Engineer', 'Internet of Things', 'Connect devices, gateways, MQTT telemetry, cloud services, and operational dashboards.', 'Hyderabad / Remote'], ['AI / Machine Learning Engineer', 'Artificial Intelligence', 'Develop practical models, computer vision workflows, MLOps, and AI product experiences.', 'Bengaluru / Remote'], ['Cloud and DevOps Engineer', 'Cloud Services', 'Engineer Azure, AWS, and GCP environments with automation, observability, security, and resilience.', 'Dover / Remote'], ['Cybersecurity Engineer', 'Security', 'Assess risk, strengthen applications and networks, and build practical security operations.', 'Pune / Remote'], ['Industrial Automation Engineer', 'Industrial Technology', 'Work with PLC, SCADA, Modbus, HMI, gateways, and real-time factory systems.', 'Pune / Hyderabad']]; return <><PageHero className="career-hero" eyebrow="Careers at Purplenow" title="Build technology<br /><em>that matters.</em>" text="Join engineers, designers, and problem-solvers creating products, platforms, and systems for the real world." image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=3840&q=90" /><section className="careers-intro"><div><Eyebrow>Why Purplenow</Eyebrow><h2>Bring your craft.<br /><em>Grow your range.</em></h2></div><p>We work across hardware, embedded, cloud, AI, industrial automation, cybersecurity, and product engineering. That means you can go deep in your discipline while seeing how your work becomes part of something larger.</p><Button onClick={() => go('contact')}>Send your profile</Button></section><section className="jobs-section"><div className="section-top"><Eyebrow>Open roles</Eyebrow><span>08 opportunities / multiple locations</span></div><div className="jobs-list">{jobs.map(([title, department, text, location], index) => <article key={title}><span>0{index + 1}</span><div><small>{department}</small><h3>{title}</h3><p>{text}</p></div><div className="job-meta"><b>{location}</b><button onClick={() => go('contact')}>Apply <ArrowUpRight size={15} /></button></div></article>)}</div></section><section className="career-values"><div><Eyebrow>How we work</Eyebrow><h2>Curious minds.<br /><em>Shared ownership.</em></h2></div><div className="career-value-grid"><span>Learn across disciplines</span><span>Make decisions visible</span><span>Respect the details</span><span>Keep the user close</span></div></section><Cta go={go} /></>; }
+function Careers({ go }) { const jobs = [['Platform Development Engineer', 'Platform Engineering', 'Design modern digital platforms, APIs, and cloud foundations for enterprise products.', 'Hyderabad / USA'], ['Hardware Design Engineer', 'Hardware Engineering', 'Develop schematics, PCB layouts, prototypes, and production-ready connected electronics.', 'Pune / USA'], ['Embedded Firmware Engineer', 'Embedded Systems', 'Build MCU, RTOS, device-driver, connectivity, and diagnostics software for real products.', 'USA'], ['IoT Solutions Engineer', 'Internet of Things', 'Connect devices, gateways, MQTT telemetry, cloud services, and operational dashboards.', 'Hyderabad / Remote'], ['AI / Machine Learning Engineer', 'Artificial Intelligence', 'Develop practical models, computer vision workflows, MLOps, and AI product experiences.', 'USA / Remote'], ['Cloud and DevOps Engineer', 'Cloud Services', 'Engineer Azure, AWS, and GCP environments with automation, observability, security, and resilience.', 'Dover / Remote'], ['Cybersecurity Engineer', 'Security', 'Assess risk, strengthen applications and networks, and build practical security operations.', 'Pune / Remote'], ['Industrial Automation Engineer', 'Industrial Technology', 'Work with PLC, SCADA, Modbus, HMI, gateways, and real-time factory systems.', 'Pune / Hyderabad']]; return <><PageHero className="career-hero" eyebrow="Careers at Purplenow" title="Build technology<br /><em>that matters.</em>" text="Join engineers, designers, and problem-solvers creating products, platforms, and systems for the real world." image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=3840&q=90" /><section className="careers-intro"><div><Eyebrow>Why Purplenow</Eyebrow><h2>Bring your craft.<br /><em>Grow your range.</em></h2></div><p>We work across hardware, embedded, cloud, AI, industrial automation, cybersecurity, and product engineering. That means you can go deep in your discipline while seeing how your work becomes part of something larger.</p><Button onClick={() => go('contact')}>Send your profile</Button></section><section className="jobs-section"><div className="section-top"><Eyebrow>Open roles</Eyebrow><span>08 opportunities / multiple locations</span></div><div className="jobs-list">{jobs.map(([title, department, text, location], index) => <article key={title}><span>0{index + 1}</span><div><small>{department}</small><h3>{title}</h3><p>{text}</p></div><div className="job-meta"><b>{location}</b><button onClick={() => go('contact')}>Apply <ArrowUpRight size={15} /></button></div></article>)}</div></section><section className="career-values"><div><Eyebrow>How we work</Eyebrow><h2>Curious minds.<br /><em>Shared ownership.</em></h2></div><div className="career-value-grid"><span>Learn across disciplines</span><span>Make decisions visible</span><span>Respect the details</span><span>Keep the user close</span></div></section><Cta go={go} /></>; }
 
 function Home({ go }) {
   return <>
@@ -548,25 +548,40 @@ function About({ go }) { return <><PageHero eyebrow="About Purplenow" title="Eng
 function Values() { return <section className="values"><Eyebrow>Values & ethics</Eyebrow><h2>Good work starts<br />with <em>good intent.</em></h2><div className="values-grid">{[['01','Stay curious','We ask better questions before we reach for easy answers.'],['02','Make it matter','Every decision should create value for people, business, or the planet.'],['03','Own the outcome','We take responsibility for the work and the impact it has.']].map(v => <div key={v[0]}><span>{v[0]}</span><h3>{v[1]}</h3><p>{v[2]}</p></div>)}</div></section>; }
 function Services({ go }) { const featured = [['Platform modernization', 'Transform legacy platforms into modern, secure, high-performance digital ecosystems.', 'service-platform-development', Cpu], ['Product engineering', 'Move from concept and design through development, testing, and deployment with one accountable partner.', 'service-hardware-design-services', HardDrive], ['Application development', 'Create tailored web and mobile experiences that meet the way your business actually works.', 'service-mobile-web', Smartphone]]; return <><PageHero eyebrow="Purplenow services" title="Engineering that turns<br /><em>complexity into progress.</em>" text="We combine product design, embedded engineering, automation, and software delivery to help modern enterprises solve harder problems." image="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=85" /><section className="services-intro"><Eyebrow>How we help</Eyebrow><h2>From a difficult brief<br />to a <em>working advantage.</em></h2><p>Purplenow provides the depth and flexibility to meet a team wherever it is: modernizing a platform, building a new product, or making everyday operations more intelligent.</p></section><section className="featured-services"><div className="section-top"><Eyebrow>Featured capabilities</Eyebrow><span>Designed around outcomes</span></div><div className="featured-service-grid">{featured.map(([title, text, path, Icon], i) => <article key={title}><span className="service-number">0{i + 1}</span><Icon size={28} /><h3>{title}</h3><p>{text}</p><button onClick={() => go(path)}>Explore service <ArrowUpRight size={16} /></button></article>)}</div></section><section className="services-all"><div className="section-top"><Eyebrow>Full service capability</Eyebrow><span>08 disciplines / 01 partner</span></div><div className="services-grid">{services.map(([title, text, Icon], i) => <button key={title} onClick={() => go(title.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace('internet-of-things', 'service-internet-of-things').replace('platform-development', 'service-platform-development').replace('hardware-design-services', 'service-hardware-design-services').replace('embedded-software', 'service-embedded-software').replace('artificial-intelligence', 'service-artificial-intelligence').replace('mobile-web', 'service-mobile-web').replace('cybersecurity', 'service-cybersecurity').replace('cloud-services', 'service-cloud-services'))}><span className="service-number">0{i + 1}</span><Icon size={29} /><h3>{title}</h3><p>{text}</p><ArrowUpRight /></button>)}</div></section><section className="delivery-steps"><Eyebrow>Our delivery model</Eyebrow><div><article><strong>01</strong><h3>Understand</h3><p>We clarify the outcome, constraints, and users before recommending a path.</p></article><article><strong>02</strong><h3>Engineer</h3><p>Specialists work together across design, software, embedded, and automation.</p></article><article><strong>03</strong><h3>Enable</h3><p>We leave your team with a solution they can operate, evolve, and trust.</p></article></div></section><Cta go={go} /></>; }
 function Industries({ go }) { return <><PageHero eyebrow="Where we work" title="Technology with a<br /><em>human pulse.</em>" text="Our work lives where precision meets purpose, across the industries shaping everyday life." image="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=85" /><section className="industry-grid">{industries.map(([title, text, image]) => <button key={title} onClick={() => go('contact')}><div style={{ backgroundImage: `url(${image})` }} /><div><Eyebrow>{title}</Eyebrow><h2>{text}</h2><ArrowUpRight /></div></button>)}</section></>; }
-function Products({ go }) { return <><PageHero eyebrow="Our products" title="Tools for the<br /><em>next normal.</em>" text="Purpose-built platforms that turn complex technology into a clear advantage." /><section className="product-list">{products.map(([number, title, sub, text, image], index) => <article key={title}><div className="product-info"><span>{number}</span><Eyebrow>{sub}</Eyebrow><h2>{title}</h2><p>{text}</p><Button onClick={() => go(`product-${index + 1}`)}>Explore product</Button></div><div className="product-image" style={{ backgroundImage: `url(${image})` }} /></article>)}</section></>; }
+function Products({ go }) { const productPages = ['nexedge-one', 'nexsense', 'nexcloud']; return <><PageHero eyebrow="Our products" title="Tools for the<br /><em>next normal.</em>" text="Purpose-built platforms that turn complex technology into a clear advantage." /><section className="product-list">{products.map(([number, title, sub, text, image], index) => <article key={title}><div className="product-info"><span>{number}</span><Eyebrow>{sub}</Eyebrow><h2>{title}</h2><p>{text}</p><Button onClick={() => go(productPages[index])}>Explore product</Button></div><div className="product-image" style={{ backgroundImage: `url(${image})` }} /></article>)}</section></>; }
 function Msp({ go }) { const cloudCards = [['Microsoft Azure', 'Cloud subscriptions, architecture, migration, governance, and ongoing support for Microsoft environments.'], ['Amazon Web Services', 'Flexible AWS foundations with cost visibility, secure operations, and certified engineering support.'], ['Google Cloud Platform', 'Data, application, and infrastructure services built for modern workloads on GCP.']]; const migrations = [['On-prem to cloud', 'Move workloads, data, and dependencies with a phased plan that protects business continuity.'], ['Cloud to cloud', 'Re-platform or consolidate between providers with clear architecture and controlled cutover.'], ['VMware to cloud', 'Modernize virtualized estates and choose the right landing zone for performance and cost.']]; const heroImage = 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80'; return <><header className="msp-hero"><div className="msp-hero-copy"><Eyebrow>Purplenow managed services</Eyebrow><h1>Cloud operations that<br /><em>keep moving.</em></h1><p>From cloud resale and one-time implementation to 24x7 support, Purplenow gives your teams a dependable partner for the systems they run every day.</p><div className="msp-hero-actions"><button className="button" onClick={() => go('services')}>Explore our services <ArrowDownRight size={17} /></button><button className="button button-light" onClick={() => go('contact')}>Talk to our team</button></div></div><div className="msp-hero-visual"><div className="msp-hero-image" style={{ backgroundImage: `linear-gradient(135deg, rgba(11, 17, 24, 0.22), rgba(11, 17, 24, 0.08)), url(${heroImage})` }} /><div className="msp-focus-panel"><strong>Our focus</strong><p>Cloud infrastructure, resilient networks, secure operations, and dependable support for modern enterprises.</p><div className="msp-panel-meta"><span>Trusted</span><strong>800+</strong></div></div><div className="msp-hero-ticker" aria-label="Managed services scrolling text"><div className="msp-hero-track"><span>Cloud</span><span>Networking</span><span>Security</span><span>Monitoring</span><span>Migration</span><span>Support</span><span>Cloud</span><span>Networking</span><span>Security</span><span>Monitoring</span><span>Migration</span><span>Support</span></div></div></div></header><section className="msp-intro"><div><Eyebrow>Managed service provider</Eyebrow><h2>More than uptime.<br /><em>More confidence.</em></h2></div><p>Our certified engineers help you design, implement, secure, and operate the right environment across cloud, networking, and security. Whether you need a one-time project or a long-term operating partner, we meet you where you are.</p><div className="msp-badges"><span><Check /> Certified engineers</span><span><Check /> 24x7 support</span><span><Check /> Ticket-based service desk</span></div></section><section className="cloud-services"><div className="section-top"><Eyebrow>Cloud solutions</Eyebrow><span>Resell / implement / support</span></div><div className="cloud-grid">{cloudCards.map(([title, text], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{text}</p><button onClick={() => go('contact')}>Discuss your environment <ArrowUpRight size={15} /></button></article>)}</div></section><section className="msp-operations"><div><Eyebrow>How we engage</Eyebrow><h2>Right-sized support<br /><em>for real operations.</em></h2></div><div className="operations-list"><article><strong>01 / One-time implementation</strong><p>Assessment, design, landing zone setup, migration, configuration, documentation, and handover.</p></article><article><strong>02 / Support services</strong><p>Monitoring, incident response, patching, backup checks, performance tuning, and service reviews.</p></article><article><strong>03 / Ticketing systems</strong><p>A structured service desk keeps requests visible, prioritized, assigned, and measurable from open to resolved.</p></article></div></section><section className="migration-section"><div className="section-top"><Eyebrow>Migration paths</Eyebrow><span>Plan carefully / move confidently</span></div><div className="migration-grid">{migrations.map(([title, text], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section><section className="partner-section"><Eyebrow>Partner ecosystem</Eyebrow><h2>Specialists where<br /><em>your stack needs them.</em></h2><div className="partner-list"><span>Microsoft Solutions Partner</span><span>AWS Partner</span><span>Google Cloud Partner</span><span>Sophos Partner</span><span>Fortinet Partner</span><span>Nutanix Partner</span></div></section><Cta go={go} /></>; }
 function Contact() {
   const [selectedLocationIndex, setSelectedLocationIndex] = useState(0);
+  const countryFlags = {
+    India: '🇮🇳',
+    USA: '🇺🇸',
+    'South Africa': '🇿🇦'
+  };
   const locations = [
     {
-      region: 'India / Bengaluru',
-      name: 'Purplenow Technologies',
-      address: 'Bengaluru, Karnataka',
-      country: 'India',
-      phone: '+91 80 0000 0000',
-      coordinates: [12.9716, 77.5946],
-      image: '/locations/bengaluru.jpg',
-      imageAlt: 'Bengaluru city skyline'
+      region: 'United States / Dover',
+      name: 'Purplenow Inc.',
+      address: '8 The Green, Suite 15186 B Dover, DE 19901, USA',
+      country: 'USA',
+      phone: '+1 (408)-688-2061',
+      coordinates: [39.1582, -75.5244],
+      image: '/locations/dover.jpg',
+      imageAlt: 'Historic downtown Dover, Delaware'
+    },
+    {
+      region: 'South Africa / Johannesburg',
+      name: 'Purplenow Pty Ltd',
+      address: 'UNIT 9 OAKLEIGH PLACE\n313 PRINCE ALFRED STREET\nPIETERMARITZBURG\nKWA-ZULU NATAL\n3201',
+      country: 'South Africa',
+      phone: '+27 10 000 0000',
+      coordinates: [-26.2041, 28.0473],
+      image: '/locations/johannesburg.jpg',
+      imageAlt: 'Johannesburg skyline at sunset'
     },
     {
       region: 'India / Hyderabad',
-      name: 'Purplenow Technologies',
-      address: 'Hyderabad, Telangana',
+      name: 'Purplenow Technologies Pvt Ltd',
+      address: '402, Plot No 169, Gnana Residency, Kavuri Hills-2, Madhapur, Hyderabad -500081',
       country: 'India',
       phone: '+91 40 0000 0000',
       coordinates: [17.385, 78.4867],
@@ -574,37 +589,19 @@ function Contact() {
       imageAlt: 'Charminar monument in Hyderabad'
     },
     {
-      region: 'India / Pune',
-      name: 'Purplenow Technologies',
-      address: 'Pune, Maharashtra',
+      region: 'India / Thrissur',
+      name: 'Purplenow Technologies Pvt Ltd',
+      address: 'Thrissur, Kerala',
       country: 'India',
-      phone: '+91 20 0000 0000',
-      coordinates: [18.5204, 73.8567],
-      image: '/locations/pune.jpg',
-      imageAlt: 'Pune city skyline'
-    },
-    {
-      region: 'United States / Dover',
-      name: '8 The Green, Suite 15186 B',
-      address: 'Dover, DE 19901',
-      country: 'USA',
-      phone: '+1 (408) 688-2061',
-      coordinates: [39.1582, -75.5244],
-      image: '/locations/dover.jpg',
-      imageAlt: 'Historic downtown Dover, Delaware'
-    },
-    {
-      region: 'South Africa / Johannesburg',
-      name: 'Purplenow Technologies',
-      address: 'Johannesburg, Gauteng',
-      country: 'South Africa',
-      phone: '+27 10 000 0000',
-      coordinates: [-26.2041, 28.0473],
-      image: '/locations/johannesburg.jpg',
-      imageAlt: 'Johannesburg skyline at sunset'
+      phone: '+91 487 23476549',
+      coordinates: [10.5276, 76.2144],
+      image: '/locations/thrissur.jpg',
+      imageAlt: 'View of Thrissur city from the Bible Tower of Basilica of Our Lady of Dolours'
     }
   ];
   const selectedLocation = locations[selectedLocationIndex];
+  const locationCount = String(locations.length).padStart(2, '0');
+  const regionCount = String(new Set(locations.map(({ country }) => country)).size).padStart(2, '0');
 
   const heroImage = 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80';
 
@@ -653,7 +650,7 @@ function Contact() {
           <Eyebrow>Find us around the world</Eyebrow>
           <h2>Closer than <em>you think.</em></h2>
         </div>
-        <span>05 locations / 03 regions</span>
+        <span>{locationCount} locations / {regionCount} regions</span>
       </div>
       <div className="location-finder">
         <div className="globe-stage">
@@ -698,17 +695,28 @@ function Contact() {
             value={selectedLocationIndex}
             onChange={(event) => setSelectedLocationIndex(Number(event.target.value))}
           >
-            {locations.map((location, index) => <option key={location.region} value={index}>{location.region}</option>)}
+            {locations.map((location, index) => <option key={location.region} value={index}>
+              {countryFlags[location.country]} {location.region.split('/')[1].trim()}
+            </option>)}
           </select>
           <article className="selected-location-card" aria-live="polite" key={selectedLocation.region}>
             <div className="selected-location-image">
               <img src={selectedLocation.image} alt={selectedLocation.imageAlt} />
+              {selectedLocation.region === 'India / Thrissur' && <a
+                className="selected-location-credit"
+                href="https://commons.wikimedia.org/wiki/File:Thrissur_City2.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >Photo: Jpullokaran / Wikimedia Commons · CC BY 3.0</a>}
               <span>Representative city view</span>
             </div>
             <div className="selected-location-copy">
-              <span className="selected-location-region">{selectedLocation.region}</span>
+              <span className="selected-location-region">
+                <span role="img" aria-label={selectedLocation.country}>{countryFlags[selectedLocation.country]}</span>
+                {' '}{selectedLocation.region.split('/')[1].trim()}
+              </span>
               <h3>{selectedLocation.name}</h3>
-              <p><MapPin size={16} aria-hidden="true" />{selectedLocation.address}<br /><span>{selectedLocation.country}</span></p>
+              <p><MapPin size={16} aria-hidden="true" />{selectedLocation.address}<br /><span role="img" aria-label={selectedLocation.country}>{countryFlags[selectedLocation.country]}</span></p>
               <a href={`tel:${selectedLocation.phone.replace(/[^+\d]/g, '')}`}><span>{selectedLocation.phone}</span><ArrowUpRight size={15} /></a>
             </div>
           </article>
@@ -719,7 +727,7 @@ function Contact() {
   </>;
 }
 function Cta({ go }) { return <section className="cta"><div><Eyebrow>Ready when you are</Eyebrow><h2>Let’s build<br /><em>what matters.</em></h2></div><Button light onClick={() => go('contact')}>Talk to our team</Button></section>; }
-function Footer({ go }) { return <footer className="site-footer"><div className="footer-shell"><div className="footer-top"><div className="footer-brand-block"><a className="brand" href="/" aria-label="Purplenow home" onClick={(event) => { event.preventDefault(); go('home'); }}><img className="brand-image" src="/purplenow-logo.jpeg" alt="Purplenow" /></a><p>Engineering, embedded, automation and software solutions designed for real-world performance.</p></div><div className="footer-links"><div><strong>Explore</strong><button onClick={() => go('about')}>About us</button><button onClick={() => go('services')}>Services</button><button onClick={() => go('industries')}>Industries</button></div><div><strong>Company</strong><button onClick={() => go('contact')}>Contact us</button><button onClick={() => go('msp')}>Managed services</button><button onClick={() => go('products')}>Products</button></div><div><strong>Connect</strong><button>LinkedIn</button><button>Careers</button><button>Privacy / Terms</button></div></div></div><div className="footer-bottom"><span>© 2026 Purplenow Technologies</span><span>Bengaluru · Austin · Munich</span><span>info@purplenow.io</span></div></div></footer>; }
+function Footer({ go }) { return <footer className="site-footer"><div className="footer-shell"><div className="footer-top"><div className="footer-brand-block"><a className="brand" href="/" aria-label="Purplenow home" onClick={(event) => { event.preventDefault(); go('home'); }}><img className="brand-image" src="/purplenow-logo.jpeg" alt="Purplenow" /></a><p>Engineering, embedded, automation and software solutions designed for real-world performance.</p></div><div className="footer-links"><div><strong>Explore</strong><button onClick={() => go('about')}>About us</button><button onClick={() => go('services')}>Services</button><button onClick={() => go('industries')}>Industries</button></div><div><strong>Company</strong><button onClick={() => go('contact')}>Contact us</button><button onClick={() => go('msp')}>Managed services</button><button onClick={() => go('products')}>Products</button></div><div><strong>Connect</strong><button>LinkedIn</button><button>Careers</button><button>Privacy / Terms</button></div></div></div><div className="footer-bottom"><span>© 2026 Purplenow Technologies</span><span>USA · SOUTH AFRICA · INDIA</span><span>info@purplenow.io</span></div></div></footer>; }
 
 function MergedMsp({ go }) {
   const providers = [
